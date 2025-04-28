@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="college_project_res_company_inherited_form_view"  model="ir.ui.view">
+            <field name="name">college.project.res.comoany.inherited.form.view</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="priority" eval="5"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button
+                        name="action_send_mail_to_customer"
+                        type="object"
+                        string="Send Mail To Customer"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="action_send_mail_to_vendor"
+                        type="object"
+                        string="Send Mail To Vendor"
+                        class="oe_highlight"
+                    />
+                    </header>
+                </xpath>
+            </field>
+        </record>
+</odoo>

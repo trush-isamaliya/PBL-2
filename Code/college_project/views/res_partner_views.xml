@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="college_project_res_partner_inherited_form_view"  model="ir.ui.view">
+            <field name="name">college.project.res.partner.inherited.form.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="5"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group[1]" position="inside">
+                    <field name="is_row_matrial_customer" invisible="not is_company" />
+                    <field name="is_row_matrial_vendor" invisible="not is_company" />
+                </xpath>
+            </field>
+        </record>
+</odoo>

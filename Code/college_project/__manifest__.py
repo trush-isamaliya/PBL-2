@@ -1,0 +1,26 @@
+{
+    "name": "college_project",
+    "description": "College Project",
+    "author": "Bizzappdev Pvt Ltd",
+    "website": "https://www.bizzappdev.com",
+    "category": "",
+    "version": "18.0.0.0.0",
+    "depends": [
+        "base",
+        "product",
+        "sale",
+        "purchase",
+        "stock",
+        "mrp",
+        "contacts",
+        "mail",
+        "uom",
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/row_matrial_data_mail_template.xml",
+        "views/product_template_views.xml",
+        "views/res_partner_views.xml",
+        "views/res_company_views.xml",
+    ],
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="college_project_product_template_inherited_form_view"  model="ir.ui.view">
+            <field name="name">college.project.product.template.inherited.form.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="priority" eval="5"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="inside">
+                    <field name="is_dairy_product" />
+                    <label for="is_dairy_product" />
+                    <field name="is_row_matrial" />
+                    <label for="is_row_matrial" />
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page name="row_matrial_line" string="Row Matrial" invisible="not is_dairy_product">
+                        <field name="row_matrial_line">
+                            <list string="Matrial Line" editable="bottom">
+                                <field name="name" />
+                                <field name="quantity" />
+                                <field name="uom_id" />
+                                <field name="standard_price" />
+                            </list>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>
